@@ -1,0 +1,18 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": []
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/app/page/cover/cover.ts",
+    "src/app/page/cover/cover.module.ts",
+    "src/app/page/index/index.ts",
+    "src/app/page/index/index.module.ts"
+  ],
+  "exclude": [
+    "src/test.ts",
+    "src/**/*.spec.ts"
+  ]
+}

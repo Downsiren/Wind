@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<div class="mainwrap">
+    <div class="leftcol">
+        <div class="logo"><img src="images/logo.png" alt=""/></div>
+        <ul class="leftnav">
+            <li><a href="#" class="menu-selected"><i class="icon-view"></i>显示</a></li>
+            <li><a href="#"><i class="icon-mod"></i>模式</a></li>
+            <li><a href="#"><i class="icon-tab"></i>图表</a></li>
+            <li><a href="#"><i class="icon-set"></i>配置</a></li>
+        </ul>
+        <div class="closenav"><a href="#"><i class="icon-gb"></i>关机</a></div>
+    </div>
+    <div class="rightcol">
+        <div class="rightbox">
+            <div class="commontit">配置 - 通讯参数</div>
+            <div class="parametersbox">
+                <table width="100%" border="0" cellspacing="0" cellpadding="0" class="parameterstabs">
+                    <tr>
+                        <th>硬件参数</th>
+                        <th></th>
+                        <th>项目说明</th>
+                    </tr>
+                    <tr>
+                        <td>设备ID</td>
+                        <td><span class="reduc">+</span>
+                            <input type="text" value="1" class="input_deviceid" />
+                            <span class="addnum">-</span></td>
+                        <td>设备编号在 1 - 254 之间</td>
+                    </tr>
+                    <tr>
+                        <td>波特率</td>
+                        <td><ul>
+                                <li><input type="radio">2400 bps</li>
+                                <li><input type="radio">9600 bps</li>
+                            </ul></td>
+                        <td>通讯速率默认为 9600bps</td>
+                    </tr>
+                    <tr>
+                        <td>校验方式</td>
+                        <td><ul>
+                                <li><input type="radio">无校验</li>
+                                <li><input type="radio">奇校验</li>
+                                <li><input type="radio">偶校验</li>
+                            </ul></td>
+                        <td>默认为无校验</td>
+                    </tr>
+                    <tr>
+                        <td>数据位</td>
+                        <td><ul>
+                                <li><input type="radio">8位</li>
+                                <li><input type="radio">7位</li>
+                                <li><input type="radio">5位</li>
+                            </ul></td>
+                        <td>默认为8位数据位</td>
+                    </tr>
+                    <tr>
+                        <td>停止位</td>
+                        <td><ul>
+                                <li><input type="radio">1位</li>
+                                <li><input type="radio">1.5位</li>
+                                <li><input type="radio">2位</li>
+                            </ul></td>
+                        <td>默认为1位停止位</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+                   <div class="parametersbottom">
+            	<div class="clearfix bottommsgbox">
+                	<div class="fl msgtxt">注意： 本设备仅支持ModBus协议的产品接入</div>
+                    <div class="fr">锁定当前设置&nbsp;<div class="toggle toggle--like fr">
+	<input type="checkbox" id="toggle--like" class="toggle--checkbox">
+	<label class="toggle--btn" for="toggle--like"><span class="toggle--feature"></span></label>
+</div></div>
+                </div>
+                <div class="bottombtnbox">
+                	<ul class="bottommenu fl">
+                    	<li><a href="#" class="active"><span>LANGUAGE</span>显示语言</a></li>
+                    	<li><a href="#"><span>COMM</span>通讯参数</a></li>
+                    	<li><a href="#"><span>TASK</span>工作参数</a></li>
+                    	<li><a href="#"><span>VIEW</span>显示设置</a></li>
+                    </ul>
+                    <div class="bottomsave"><a href="#"><span>SAVE</span>保存</a></div>
+                </div>
+            </div>
+ 
+    </div>
+</div>
+</body>
+</html>

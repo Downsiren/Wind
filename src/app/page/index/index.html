@@ -1,0 +1,61 @@
+<!--
+ * @Description: 
+ * @Author: zhangxin
+ * @Date: 2020-03-25 22:52:32
+ * @LastEditTime: 2020-03-29 12:37:07
+ * @LastEditors: zhangxin
+ -->
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="/assets/page/css/main.css">
+</head>
+<body>
+<div class="mainwrap">
+    <div class="leftcol">
+        <div class="logo"><img src="assets/page/images/logo.png" alt=""/></div>
+        <ul class="leftnav">
+            <li><a href="#" class="menu-selected"><i class="icon-view"></i>显示</a></li>
+            <li><a href="#"><i class="icon-mod"></i>模式</a></li>
+            <li><a href="#"><i class="icon-tab"></i>图表</a></li>
+            <li><a href="#"><i class="icon-set"></i>配置</a></li>
+        </ul>
+        <div class="closenav"><a href="#"><i class="icon-gb"></i>关机</a></div>
+    </div>
+    <div class="rightcol">
+        <div class="maincontent fl"><img src="assets/page/images/img.png"  alt=""/></div>
+        <div class="rightitem fl">
+            <div class="windspeed">
+                <h5>当前风速</h5>
+                <div class="box clearfix line">
+                    <div *ngFor="let item of datas" class="font fl txt-fs">{{item.cu_speed}} 52.2</div>
+                    <div class="fr yellow">米/秒<i class="icon-fs"></i></div>
+                </div>
+                <h6>最大风速</h6>
+                <div class="box clearfix line">
+                    <div class="font fl txt-maxfs">73.2</div>
+                    <div class="fr gray"><span class="font">MAX</span><BR>
+                        米/秒</div>
+                </div>
+                <div class="box clearfix">
+                    <div class="font fl txt-fl">风力 <span class="font">7</span> 级</div>
+                    <div class="fr gray"><i class="icon-fl"></i></div>
+                </div>
+            </div>
+            <div class="winddir">
+                <h5>当前风向</h5>
+                <div class="box clearfix line">
+                    <div class="font fl txt-fx">180°</div>
+                    <div class="fr yellow"><i class="icon-fx"></i></div>
+                </div>
+                <div class="box">
+                    <div class="font fl txt-dir">东南风</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

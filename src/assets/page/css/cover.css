@@ -1,0 +1,21 @@
+/* CSS Document */
+
+body {background:#1a1f22;}
+
+.coverwrap {width:1024px;height:600px;position:relative;}
+.circlebox {padding-top:154px;}
+
+.circlebg1 {background:#534f4e; -webkit-border-radius:105px;-moz-border-radius:105px;border-radius:105px;width:198px;height:198px;padding:12px 0 0 12px;margin:0 auto;}
+.circlebg2 {background:#1a1f22;-webkit-border-radius:93px;-moz-border-radius:93px;border-radius:93px;width:186px;height:186px;margin:0 auto;display: table-cell;vertical-align:middle;}
+.circlebg2 img {margin:8px 0 0 20px;}
+
+.covertxt {text-align:center;color:#cbcbcb;font-size:14px;font-weight:bold;margin-top:30px;}
+
+.covercopyright {color:#535354;font-size:14px;clear:both;text-align:right;padding-right:20px;line-height:30px;}
+
+.coverlogo {background:#21272b;width:350px;height:56px; border-bottom-left-radius:28px;border-top-left-radius:28px;text-align:right;line-height:76px;float:right;clear:both;margin-top:65px;}
+.coverlogo img {margin-right:20px;}
+
+
+
+
