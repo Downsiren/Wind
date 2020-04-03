@@ -2,14 +2,14 @@
  * @Description: index.ts
  * @Author: zhangxin
  * @Date: 2020-03-27 19:46:43
- * @LastEditTime: 2020-03-31 17:59:18
- * @LastEditors: zhang xin
+ * @LastEditTime: 2020-04-02 13:30:34
+ * @LastEditors: zhangxin
  */
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 
 //import{ Injectable }from'@angular/core';
 import { DbmanageService } from '../../services/DbService/dbmanage.service';
-//import { TestService } from '../../service/sqlservice/test.service';
+
 
 @Component({
     selector:"app-index",
