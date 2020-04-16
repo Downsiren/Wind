@@ -4,7 +4,7 @@
  * @Author: zhang xin
  * @Date: 2020-03-30 22:37:01
  * @LastEditors: zhangxin
- * @LastEditTime: 2020-04-02 17:51:55
+ * @LastEditTime: 2020-04-08 11:53:54
  */
 import { Injectable } from '@angular/core';
 
@@ -43,7 +43,7 @@ export class DbmanageService {
   getDataFromTestDb(){
     let output_data =[];
     try {
-      this.initDatabase();
+      //this.initDatabase();
       this.createTableToTestDb();
       this.insertDataToDb();
       output_data =  this.queryDataFromTable();
@@ -87,18 +87,20 @@ export class DbmanageService {
  */    
   openAndroidDb(){
     try {
-        this.db = this.sqlite.create({
+      var that = this;
+        this.sqlite.create({
         name: 'appdata.db',
         location: 'default'
       }).then((database) =>{
         this.db = database;
         //return this.db;
-        this.createTableToTestDb();
-        this.insertDataToDb();
-        
+        //this.createTableToTestDb();
+       // this.insertDataToDb();
+        console.log(database);
+        console.log("this.db",this.db);
       })
       ;
-      console.log(" 安卓数据库打开成功！ ",this.db)
+      console.log(" 安卓数据库打开成功！ ",that.db)
       alert("数据库打开成功")
     } catch (error) {
       console.log("安卓数据库打开失败" + error.message);
@@ -211,7 +213,7 @@ export class DbmanageService {
  * @return: 
  */  
   insertDataToDb(){
-    let sql = " INSERT INTO show (id, cu_speed, max_speed, wind_force, cu_direction, wind_type, addtime) VALUES (3, 111, 123, 7, 190.0, '东南风', '2020-03-31 17:22:00')";
+    let sql = " INSERT INTO show (id, cu_speed, max_speed, wind_force, cu_direction, wind_type, addtime) VALUES (4, 111, 123, 7, 190.0, '东南风', '2020-03-31 17:22:00')";
         this.execSql(sql).then(() => {
             console.log(  '插入成功');
             alert("插入成功")

@@ -9,7 +9,11 @@
     "src/app/page/cover/cover.ts",
     "src/app/page/cover/cover.module.ts",
     "src/app/page/index/index.ts",
-    "src/app/page/index/index.module.ts"
+    "src/app/page/index/index.module.ts",
+    "src/app/page/index/config-comm.ts",
+    "src/app/page/index/config-comm.module.ts",
+    "src/app/page/index/professional.ts",
+    "src/app/page/index/professional.module.ts"
   ],
   "exclude": [
     "src/test.ts",

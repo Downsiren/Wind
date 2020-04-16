@@ -1,20 +1,30 @@
+<!--
+ * @Description: 
+ * @Author: zhangxin
+ * @Date: 2020-03-31 20:53:43
+ * @LastEditTime: 2020-04-16 23:53:20
+ * @LastEditors: zhangxin
+ -->
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>无标题文档</title>
-<link type="text/css" rel="stylesheet" href="css/main.css">
+<link type="text/css" rel="stylesheet" href="/assets/page/css/main.css">
 </head>
 
 <body>
 <div class="mainwrap">
     <div class="leftcol">
-        <div class="logo"><img src="images/logo.png" alt=""/></div>
+        <div class="logo"><img src="/assets/page/images/logo.png" alt=""/></div>
         <ul class="leftnav">
-            <li><a href="#" class="menu-selected"><i class="icon-view"></i>显示</a></li>
+            <!--li><a href="#" class="menu-selected"><i class="icon-view"></i>显示</a></li-->
+            <li><a href="javascript:void(0)" (click)="clickToIndexPage()"><i class="icon-view"></i>显示</a></li>
             <li><a href="#"><i class="icon-mod"></i>模式</a></li>
-            <li><a href="#"><i class="icon-tab"></i>图表</a></li>
-            <li><a href="#"><i class="icon-set"></i>配置</a></li>
+            <!--li><a href="#"><i class="icon-tab"></i>图表</a></li-->
+            <li><a href="javascript:void(0)" (click)="clickToProfessionalPage()"><i class="icon-tab"></i>图表</a></li>
+            <!--li><a href="#"><i class="icon-set"></i>配置</a></li-->
+            <li><a href="#" class="menu-selected"><i class="icon-set"></i>配置</a></li>
         </ul>
         <div class="closenav"><a href="#"><i class="icon-gb"></i>关机</a></div>
     </div>
@@ -38,35 +48,35 @@
                     <tr>
                         <td>波特率</td>
                         <td><ul>
-                                <li><input type="radio">2400 bps</li>
-                                <li><input type="radio">9600 bps</li>
+                                <li><input type="radio" name="baudRate" value="2400">2400 bps</li>
+                                <li><input type="radio" name="baudRate" value="9600" checked>9600 bps</li>
                             </ul></td>
                         <td>通讯速率默认为 9600bps</td>
                     </tr>
                     <tr>
                         <td>校验方式</td>
                         <td><ul>
-                                <li><input type="radio">无校验</li>
-                                <li><input type="radio">奇校验</li>
-                                <li><input type="radio">偶校验</li>
+                                <li><input type="radio" name="parity" value="0" checked>无校验</li>
+                                <li><input type="radio" name="parity" value="1">奇校验</li>
+                                <li><input type="radio" name="parity" value="2">偶校验</li>
                             </ul></td>
                         <td>默认为无校验</td>
                     </tr>
                     <tr>
                         <td>数据位</td>
                         <td><ul>
-                                <li><input type="radio">8位</li>
-                                <li><input type="radio">7位</li>
-                                <li><input type="radio">5位</li>
+                                <li><input type="radio" name="dataBits" value="8" checked>8位</li>
+                                <li><input type="radio" name="dataBits" value="7">7位</li>
+                                <li><input type="radio" name="dataBits" value="5">5位</li>
                             </ul></td>
                         <td>默认为8位数据位</td>
                     </tr>
                     <tr>
                         <td>停止位</td>
                         <td><ul>
-                                <li><input type="radio">1位</li>
-                                <li><input type="radio">1.5位</li>
-                                <li><input type="radio">2位</li>
+                                <li><input type="radio" name="stopBit" value="1" checked>1位</li>
+                                <!--li><input type="radio">1.5位</li-->
+                                <li><input type="radio" name="stopBit" value="2">2位</li>
                             </ul></td>
                         <td>默认为1位停止位</td>
                     </tr>
@@ -88,7 +98,7 @@
                     	<li><a href="#"><span>TASK</span>工作参数</a></li>
                     	<li><a href="#"><span>VIEW</span>显示设置</a></li>
                     </ul>
-                    <div class="bottomsave"><a href="#"><span>SAVE</span>保存</a></div>
+                    <div class="bottomsave"><a href="javascript:void(0)" (click)="saveConfig()"><span>SAVE</span>保存</a></div>
                 </div>
             </div>
  

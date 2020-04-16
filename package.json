@@ -25,12 +25,23 @@
     "@ionic-native/sqlite": "^5.23.0",
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^5.0.0",
+    "@types/jquery": "^3.3.35",
     "cordova-android": "^8.1.0",
+    "cordova-plugin-chrome-apps-common": "^1.0.7",
+    "cordova-plugin-chrome-apps-sockets-tcp": "^1.3.7",
     "cordova-plugin-serialport-rw": "^1.3.6",
+    "cordova-plugin-wifiwizard2": "git+https://github.com/tripflex/wifiwizard2.git",
     "cordova-sqlite-storage": "^5.0.0",
+    "cordovanetworkmanager": "^2.6.0",
     "core-js": "^2.5.4",
+    "cz.blocshop.socketsforcordova": "^1.1.0",
+    "es6-promise-plugin": "^4.1.0",
+    "jquery": "^3.5.0",
     "rxjs": "~6.5.1",
+    "socket.io": "^2.3.0",
+    "socketServer": "git+https://github.com/huge818/socketServer.git",
     "tslib": "^1.9.0",
+    "wifiwizard2": "git+https://github.com/tripflex/wifiwizard2.git#v3.1.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
@@ -74,7 +85,12 @@
       },
       "cordova-plugin-ionic-keyboard": {},
       "cordova-sqlite-storage": {},
-      "cordova-plugin-serialport-rw": {}
+      "cordova-plugin-serialport-rw": {},
+      "cz.blocshop.socketsforcordova": {},
+      "wifiwizard2": {},
+      "cordovanetworkmanager": {},
+      "cordova-plugin-chrome-apps-sockets-tcp": {},
+      "socketServer": {}
     },
     "platforms": [
       "android"

@@ -2,13 +2,15 @@
  * @Description: index.ts
  * @Author: zhangxin
  * @Date: 2020-03-27 19:46:43
- * @LastEditTime: 2020-04-02 13:30:34
+ * @LastEditTime: 2020-04-12 16:27:16
  * @LastEditors: zhangxin
  */
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { Router  } from '@angular/router';
 
-//import{ Injectable }from'@angular/core';
 import { DbmanageService } from '../../services/DbService/dbmanage.service';
+import {  WifimanageService } from '../../services/WifiService/wifimanage.service';
+import {  SocketService } from '../../services/SocketService/socket.service';
 
 
 @Component({
@@ -23,7 +25,9 @@ export class IndexPage implements OnInit{
 
     constructor(
         private dbmanageService : DbmanageService,
-       // private testService : TestService,
+        private wifimanage : WifimanageService,
+        private socketmanage : SocketService,
+        private router : Router,
         private ref :ChangeDetectorRef,
     ) {}
     
@@ -31,53 +35,48 @@ export class IndexPage implements OnInit{
         console.log('跳转成功');
         console.log(this);
         this.datas = this.dbmanageService.getDataFromTestDb();
-       // this.testCreate();
-        //this.testInsert();
-        //this.datas = this.testQuery();
-        //this.testService.textone();
-        //this.datas = this.testService.textCreate();
-        //this.datas = this.dbmanageService.initDB();
-        console.log("open");
+        //this.wifimanage.wifiConnection();
+        this.socketmanage.socketGetData();
+        this.socketmanage.socketConnect();
+       //this.socketmanage.checkSocket();
+        
+        console.log("index open");
         this.ref.detectChanges();
        //this.datas = this.dbmanageService.queryData();
        console.log("datas",this.datas);
     }
 
 
-   /* testCreate(){
-        //let sql = "CREATE TABLE IF NOT EXISTS DemoTable (name, score)"
-        let sql = "CREATE TABLE IF NOT EXISTS show (id INT PRIMARY KEY UNIQUE NOT NULL, cu_speed REAL, max_speed REAL, wind_force INT, cu_direction REAL, wind_type VARCHAR (50), time DATETIME COLLATE BINARY)"
-        this.testService.execSql(sql).then(() => {
-            console.info(  '创建成功');
-        }).catch(err => {
-            console.error("出错了", err.error.message);
-        });
-    }
-    
-    testInsert(){
-        let sql = " INSERT INTO show (id, cu_speed, max_speed, wind_force, cu_direction, wind_type, time) VALUES (2435, 52.2, 73.2, 7, 180.0, '东南风', '2020-03-27 14:18:00')"
-        this.testService.execSql(sql).then(() => {
-            console.info(  '插入成功');
-        }).catch(err => {
-            console.error("出错了",err.message);
-        });
+    /**
+     * @description: 点击跳转到config-comm.html页面
+     * @param : 
+     * @return: 
+     */
+    clickToConfigPage() : void{
+        try {
+            this.router.navigate(['/config'],{replaceUrl: true});
+            console.log("已跳转config页面")
+            window.location.replace('/config') //页面同步刷新为config-comm.html
+        } catch (error) {
+            console.error("未跳转config页面",error);
+        }
+         
     }
 
-    testQuery(){
-        let output = [];
-       // let sql = "select * from DemoTable order by score desc LIMIT 1";
-       let sql = "select * from show order by time desc LIMIT 1";
-               this.testService.execSql(sql, []).then((data) => {
-                   for (let i = 0; i < data.res.rows.length; i++) {
-                       output.push(data.res.rows.item(i));
-                   }
-                    console.log(output );
-               }).catch((err) => {
-                   console.error(err);
-               });
-        return output;
-    }*/
-
+/**
+ * @description: 点击跳转到professional.html页面
+ * @param : 
+ * @return: 
+ */    
+    clickToProfessionalPage() : void{
+        try {
+            this.router.navigate(['/professional'],{replaceUrl: true});
+            console.log("已跳转professional页面")
+            window.location.replace('/professional') //页面同步刷新为professional.html
+        } catch (error) {
+            console.error("未跳转professional页面",error);
+        }
+    }
 
     
 }
